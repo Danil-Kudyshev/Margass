@@ -68,3 +68,16 @@ body:has(dialog[open]){overflow:hidden}
 .parts-filters{display:flex;flex-wrap:wrap;gap:9px;padding:20px 28px 4px}.parts-filter{padding:11px 16px;background:#fff;border:1px solid #dde1e7;border-radius:9px;color:#555f69;font:inherit;font-size:13px;cursor:pointer}.parts-filter.active{background:#151b22;color:#fff;border-color:#151b22}.parts-filter:hover{border-color:var(--cyan)}.parts-filter:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
 .parts-panel[hidden]{display:none}.parts-empty{padding:64px 28px 88px;text-align:center}.parts-empty h3{font-size:23px;margin:0 0 12px}.parts-empty p{color:#818791}.tire-card .product-info dd{overflow-wrap:anywhere}
 @media(max-width:700px){#parts-catalog{width:calc(100% - 16px);max-height:94vh;border-radius:18px}.parts-filters{padding:16px 16px 0;gap:8px}.parts-filter{font-size:12px;padding:10px 12px}}
+
+/* Компактный первый экран только на телефонах */
+@media(max-width:600px){
+ .hero{padding-top:12px}
+ .hero-box{min-height:0}
+ .hero-copy{padding:24px 24px 12px;max-width:none}
+ .hero-copy h1{margin:18px 0 14px}
+ .hero-copy .lead{margin:0;max-width:320px;line-height:1.55}
+ .hero-copy .actions{margin-top:20px}
+ .hero-art{position:relative;display:block;right:auto;bottom:auto;width:100%;height:200px;object-fit:contain;object-position:center;mask-image:linear-gradient(to bottom,transparent,black 8%);opacity:1}
+ .hero-tag{position:relative;left:auto;bottom:auto;padding:8px 24px 16px;font-size:10px}
+ .hero-box:before{top:-210px;opacity:.45}
+}
