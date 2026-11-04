@@ -94,3 +94,53 @@ body:has(dialog[open]){overflow:hidden}
  .hero-copy h1{font-size:clamp(29px,8vw,40px);line-height:1.1;letter-spacing:-1.2px;margin:0 0 16px}
 }
 @media(max-width:360px){.brand img{width:44px;height:44px}.word{font-size:25px}.links{gap:9px;font-size:10px}}
+
+/* Иконки отзывов и адреса */
+.review-symbol { color: #edb31b; }
+.address::after { content: none; }
+.address-pin { position: absolute; top: 30px; right: 30px; width: 32px; height: 32px; color: #10a2bd; }
+
+@media (min-width: 1001px) {
+ .categories { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+}
+
+.product-specs-toggle {
+  display: none;
+}
+
+@media (max-width: 700px) {
+  .product-photo {
+    width: 100%;
+    max-height: 232px;
+  }
+
+  .product-main {
+    object-position: center;
+    transform: scale(1.045);
+  }
+
+  .product-info {
+    padding-block: 20px;
+  }
+
+  .product-purchase {
+    padding-top: 14px;
+  }
+
+  .product-specs-toggle {
+    display: block;
+    align-self: flex-start;
+    min-height: 44px;
+    padding: 10px 14px;
+    border: 1px solid #dde1e7;
+    border-radius: 9px;
+    background: #fff;
+    color: var(--ink);
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  .product-specs-toggle[aria-expanded="false"] + dl {
+    display: none;
+  }
+}
